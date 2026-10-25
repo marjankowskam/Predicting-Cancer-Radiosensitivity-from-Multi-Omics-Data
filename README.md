@@ -1,6 +1,19 @@
-# COMP0158 - A thesis submitted for the degree of MSc Data Science and Machine Learning
+# Predicting Radiotherapy Sensitivity in Cancer Cell Lines from Epigenetic Data: A Machine Learning Approach
+## A thesis submitted for the degree of MSc Data Science and Machine Learning
 
-**Candidate Number: NKPJ2**
+[Diagram_methods.drawio.pdf](https://github.com/user-attachments/files/33938953/Diagram_methods.drawio.pdf)
+
+This project investigates whether machine learning can predict cancer radiosensitivity from molecular profiles, with a particular focus on global histone modifications and their integration with transcriptomic, epigenetic and proteomic data.
+
+Methods include support vector regression, kernel ridge regression, XGBoost, multi-head multilayer perceptrons and Bayesian neural networks. Variational autoencoders are used for missing-data imputation, while Gene Set Variation Analysis (GSVA) produces biologically informed pathway-level features for dimensionality reduction. Experiments also investigate sample weighting to improve predictions for highly radiosensitive and radioresistant samples.
+
+RNA-seq provided the strongest individual predictor, achieving an R² of approximately 0.30. Histone modification profiles had limited predictive value, and multi-omics integration did not outperform the strongest single-modality baseline. Pathway-level features reduced dimensionality approximately 10–30-fold without sacrificing accuracy and improved proteomics predictions.
+
+External validation on a more clinically relevant dataset showed partial transfer, with an AUROC of 0.69 and Spearman correlation of 0.318. The findings highlight challenges involving noisy biological data, missing values, imbalanced responses and domain shift when transferring models trained on cancer cell lines to other biological systems.
+
+Completed as an MSc Data Science and Machine Learning dissertation at UCL, awarded Distinction.
+
+Topics: machine learning, computational biology, cancer radiosensitivity, radiotherapy response, multi-omics integration, epigenetics, histone modifications, RNA-seq, DNA methylation, proteomics, variational autoencoders, Bayesian neural networks, missing-data imputation, GSVA, pathway analysis, domain shift.
 
 _Note: The code was developed drawing on the configuration and data processing setup provided with P-NET (Haitham A Elmarakeby et al. in “Biologically informed deep neural network for prostate cancer discover" (paper link: https://www.nature.com/articles/s41586-021-03922-4)), which I adapted and extended for our own validation framework._ - The external code used has been clearly indicated, and any modifications to it described.
 
